@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0" />
+    <title>Agent Code</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      /* Create two equal columns that floats next to each other */
+      .column {
+        float: left;
+        width: 50%;
+        padding: 10px;
+      }
+
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      /* Style the buttons */
+      .btn {
+        border: none;
+        outline: none;
+        padding: 12px 16px;
+        background-color: #f1f1f1;
+        cursor: pointer;
+      }
+
+      .btn:hover {
+        background-color: #ddd;
+      }
+      h1,h2 {
+        text-align: center;
+      }
+      img {
+        display: block;
+      }
+
+      .btn.active {
+        background-color: #666;
+        color: white;
+      }
+
+      .table {
+        width: 90%;
+        margin-left: 5%;
+      }
+    </style>
+  </head>
+  <body>
+    <!--header-->
+    <nav>
+      <a href="index.html"
+        ><img
+          src="https://cdn.glitch.com/1ec3f49c-c727-4187-8082-d28c4e9b2889%2Flogo2.png?v=1629571616573"
+      /></a>
+      <div class="nav-links" id="navlinks">
+        <i class="fa fa-times" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="python_tutorial.html">Python</a></li>
+          <li><a href="javascript_tutorial.html">JavaScript</a></li>
+          <li><a href="html_css_tutorial.html">HTML/CSS</a></li>
+          <!-- <li><a href="game.html">Game</a></li> -->
+          <li><a href="project_ideas.html">Project Ideas</a></li>
+          <li><a href="more_resources.html">More Resources</a></li>
+        </ul>
+      </div>
+      <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+
+    <section class="table">
+      <div>
+        <p style="padding-left:40%;">
+          <img
+            src="https://www.ocpsoft.org/wp-content/uploads/2013/01/javascript_logo_unofficial.png"
+            alt="Logo"
+            width="300"
+            length="300"
+          />
+        </p>
+
+        <h2>
+          JavaScript Loops
+        </h2>
+        <p>
+          The JavaScript Array class is a global object that is used in the
+          construction of arrays; which are high-level, list-like objects.
+        </p>
+      </div>
+    </section>
+
+    <section class="table">
+      <p>
+        There are many different kinds of loops, but they all essentially do the
+        same thing: they repeat an action some number of times. (Note that it's
+        possible that number could be zero!) The various loop mechanisms offer
+        different ways to determine the start and end points of the loop. There
+        are various situations that are more easily served by one type of loop
+        over the others. The statements for loops provided in JavaScript are:
+      </p>
+      <ul>
+        <li>for statement</li>
+        <li>do...while statement</li>
+        <li>while statement</li>
+        <li>labeled statement</li>
+        <li>break statement</li>
+        <li>continue statement</li>
+        <li>for...in statement</li>
+        <li>for...of statement</li>
+      </ul>
+
+      <h2>
+        for statement
+      </h2>
+
+      <p>
+        A for loop repeats until a specified condition evaluates to false. The
+        JavaScript for loop is similar to the Java and C for loop. A for
+        statement looks as follows:
+      </p>
+
+      <p style="padding-left:30%;">
+        <img
+          src="https://www.theengineeringprojects.com/wp-content/uploads/2020/01/For-Loops-In-JavaScript-1.jpg"
+          width="600"
+          length="400"
+        />
+      </p>
+      <p>
+        When a for loop executes, the following occurs: The initializing
+        expression initialExpression, if any, is executed. This expression
+        usually initializes one or more loop counters, but the syntax allows an
+        expression of any degree of complexity. This expression can also declare
+        variables. The conditionExpression expression is evaluated. If the value
+        of conditionExpression is true, the loop statements execute. If the
+        value of condition is false, the for loop terminates. (If the condition
+        expression is omitted entirely, the condition is assumed to be true.)
+        The statement executes. To execute multiple statements, use a block
+        statement ({ ... }) to group those statements. If present, the update
+        expression incrementExpression is executed. Control returns to Step 2.
+      </p>
+
+      <h2>
+        do...while statement
+      </h2>
+
+      <p>
+        The do...while statement repeats until a specified condition evaluates
+        to false.
+      </p>
+
+      <p>
+        statement is always executed once before the condition is checked. (To
+        execute multiple statements, use a block statement ({ ... }) to group
+        those statements.) If condition is true, the statement executes again.
+        At the end of every execution, the condition is checked. When the
+        condition is false, execution stops, and control passes to the statement
+        following do...while.
+      </p>
+
+      <p>
+        We can also declare multiple variables in one line:
+      </p>
+
+      <p style="padding-left:30%;">
+        <img
+          src="http://espezua.github.io/blog/imgs/do-while-js.png"
+          width="600"
+          length="400"
+        />
+      </p>
+      <h2>
+        While Loop
+      </h2>
+      <p>
+        A while statement executes its statements as long as a specified
+        condition evaluates to true. If the *condition *becomes false, statement
+        within the loop stops executing and control passes to the statement
+        following the loop. The condition test occurs before statement in the
+        loop is executed. If the condition returns true, statement is executed
+        and the condition is tested again. If the condition returns false,
+        execution stops, and control is passed to the statement following while.
+        To execute multiple statements, use a block statement ({ ... }) to group
+        those statements.
+      </p>
+      <p style="padding-left:30%">
+        <img
+          src="https://miro.medium.com/max/1053/1*d-jh2Fd0f11Mdn4gx_TWGA.png"
+          width="600"
+          length="400"
+        />
+      </p>
+    </section>
+
+    <!--footer-->
+    <section class="footer">
+      <h3>About Us</h3>
+      <p>
+        This website was created by Hiba Altaf, Thanhbinh Nguyen, and Anas
+        Ahmed.<br />
+        The material on this page can only be used for academic purposes and the
+        authors must be accredited for all original content.
+      </p>
+      <div class="icons">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-linkedin"></i>
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name='viewport' content='with=device-width, initial-scale=1.0'>
+    <title>Agent Code</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous">
+<style>
+    * {
+        box-sizing: border-box;
+      }
+
+      /* Create two equal columns that floats next to each other */
+      .column {
+        float: left;
+        width: 50%;
+        padding: 10px;
+      }
+
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      /* Style the buttons */
+      .btn {
+        border: none;
+        outline: none;
+        padding: 12px 16px;
+        background-color: #f1f1f1;
+        cursor: pointer;
+      }
+
+      .btn:hover {
+        background-color: #ddd;
+      }
+      h1 {
+        text-align: center;
+      }
+      .main h2, h3{
+        text-align:left;
+      }
+      .footer h3{
+          text-align:center;
+      }
+      img {
+        display: block;
+      }
+
+      .btn.active {
+        background-color: #666;
+        color: white;
+      }
+
+      .table{
+          width:90%;
+          margin-left:5%;
+      }
+      .main{
+          width:90%;
+          margin-left:5%;
+          margin-top:none;
+          text-align:left;
+      }
+      .main img{
+          width:20%;
+          height:15%;
+          padding:20px;
+          min-width:350px;
+          min-height:100px;
+      }
+      
+    </style>
+</head>
+<body>
+    <!--header-->
+    <nav>
+        <a href="index.html"><img src="https://cdn.glitch.com/1ec3f49c-c727-4187-8082-d28c4e9b2889%2Flogo2.png?v=1629571616573"/></a>
+        <div class="nav-links" id="navlinks">
+          <i class="fa fa-times" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="python_tutorial.html">Python</a></li>
+            <li><a href="javascript_tutorial.html">JavaScript</a></li>
+            <li><a href="html_css_tutorial.html">HTML/CSS</a></li>
+            <!-- <li><a href="game.html">Game</a></li> -->
+            <li><a href="project_ideas.html">Project Ideas</a></li>
+            <li><a href="more_resources.html">More Resources</a></li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+        
+    <!--body-->
+    <section class='main'>
+        <h1>Python User Input and Exceptions</h1>
+        <h2>User Input</h2>
+        <p>
+        In python, we can ask the user to enter some input for your program using the input() method. 
+        You first make a variable and set its value equal to input('question you want to ask'). Whatever
+        the user enters will then be set as the variable's value. One important thing to remember is
+        that the user input will always have a datatype of string even if the user enters a number so its your 
+        responsibility to make the conversion.
+        </p>
+        <img src='https://cdn.glitch.com/1ec3f49c-c727-4187-8082-d28c4e9b2889%2Fimg19.PNG?v=1629658706838'>
+        <img src='https://cdn.glitch.com/1ec3f49c-c727-4187-8082-d28c4e9b2889%2Fimg20.PNG?v=1629658715581'>
+        <h2>Exceptions</h2>
+        <p>
+        The try block lets you test a block of code for errors. The except block lets you handle and respond
+        to the error without letting it stop your program from running its course.
+        The finally block lets you execute code regardless of the result of the try 
+        and except blocks
+        </p>
+        <img src='https://cdn.glitch.com/1ec3f49c-c727-4187-8082-d28c4e9b2889%2Fimg21.PNG?v=1629658719226'>
+    </section>
+    <!--footer-->
+    <section class='footer'>
+        <h3>About Us</h3>
+        <p>This website was created by Hiba Altaf, Thanhbinh Nguyen, and Anas Ahmed.<br> The material on this page can only be used for academic purposes and the authors must be accredited for all original content.</p>
+        <div class='icons'>
+            <i class='fa fa-facebook'></i>
+            <i class='fa fa-twitter'></i>
+            <i class='fa fa-instagram'></i>
+            <i class='fa fa-linkedin'></i>
+        </div>
+    </section>
+<script>
+var navLinks = document.getElementById('navlinks');
+function showMenu(){
+    navlinks.style.right = '0';
+}
+function hideMenu(){
+    navlinks.style.right = '-150px';
+}
+
+</script>
+</body>
+
+</html>

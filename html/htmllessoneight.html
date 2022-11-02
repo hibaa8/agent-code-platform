@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0" />
+    <title>Agent Code</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      /* Create two equal columns that floats next to each other */
+      .column {
+        float: left;
+        width: 50%;
+        padding: 10px;
+      }
+
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      /* Style the buttons */
+      .btn {
+        border: none;
+        outline: none;
+        padding: 12px 16px;
+        background-color: #f1f1f1;
+        cursor: pointer;
+      }
+
+      .btn:hover {
+        background-color: #ddd;
+      }
+      h1 {
+        text-align: center;
+      }
+      img {
+        display: block;
+      }
+
+      .btn.active {
+        background-color: #666;
+        color: white;
+      }
+
+      .table {
+        width: 90%;
+        margin-left: 5%;
+      }
+    </style>
+  </head>
+  <body>
+    <!--header-->
+    <nav>
+      <a href="index.html"
+        ><img
+          src="https://cdn.glitch.com/1ec3f49c-c727-4187-8082-d28c4e9b2889%2Flogo2.png?v=1629571616573"
+      /></a>
+      <div class="nav-links" id="navlinks">
+        <i class="fa fa-times" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="python_tutorial.html">Python</a></li>
+          <li><a href="javascript_tutorial.html">JavaScript</a></li>
+          <li><a href="html_css_tutorial.html">HTML/CSS</a></li>
+          <!-- <li><a href="game.html">Game</a></li> -->
+          <li><a href="project_ideas.html">Project Ideas</a></li>
+          <li><a href="more_resources.html">More Resources</a></li>
+        </ul>
+      </div>
+      <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+    <section class="table">
+      <p style="padding-left:40%;">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg"
+          width="300"
+          length="300"
+        />
+      </p>
+      <h2>Intro to CSS</h2>
+      <p>
+        CSS (Cascading Style Sheets) is used to style and lay out web pages —
+        for example, to alter the font, color, size, and spacing of your
+        content, split it into multiple columns, or add animations and other
+        decorative features. This module provides a gentle beginning to your
+        path towards CSS mastery with the basics of how it works, what the
+        syntax looks like, and how you can start using it to add styling to
+        HTML.
+      </p>
+
+      <h2>Why to Learn CSS?</h2>
+      <p>
+        Cascading Style Sheets, fondly referred to as CSS, is a simple design
+        language intended to simplify the process of making web pages
+        presentable.
+      </p>
+      <p></p>
+
+      <p>
+        CSS is a MUST for students and working professionals to become a great
+        Software Engineer specially when they are working in Web Development
+        Domain. I will list down some of the key advantages of learning CSS:
+      </p>
+
+      <ul>
+        <li>
+          Create Stunning Web site - CSS handles the look and feel part of a web
+          page. Using CSS, you can control the color of the text, the style of
+          fonts, the spacing between paragraphs, how columns are sized and laid
+          out, what background images or colors are used, layout
+          designs,variations in display for different devices and screen sizes
+          as well as a variety of other effects.
+        </li>
+
+        <li>
+          Become a web designer - If you want to start a carrer as a
+          professional web designer, HTML and CSS designing is a must skill.
+        </li>
+
+        <li>
+          Control web - CSS is easy to learn and understand but it provides
+          powerful control over the presentation of an HTML document. Most
+          commonly, CSS is combined with the markup languages HTML or XHTML.
+        </li>
+
+        <li>
+          Learn other languages - Once you understands the basic of HTML and CSS
+          then other related technologies like javascript, php, or angular are
+          become easier to understand.
+        </li>
+      </ul>
+
+      <h2>Hello World Using CSS</h2>
+      <p>
+        Just to give you a little excitement about CSS, I'm going to give you a
+        small conventional CSS Hello World program. As you can see the CSS code
+        is in the style section.
+      </p>
+      <img
+        src="https://pbs.twimg.com/media/EZB2JYeVcAIlMzw.jpg"
+        width="500"
+        lenght="700"
+      />
+
+      <h2>Applications of CSS</h2>
+      <p>
+        As mentioned before, CSS is one of the most widely used style language
+        over the web. I'm going to list few of them here:
+      </p>
+
+      <ul>
+        <li>
+          CSS saves time - You can write CSS once and then reuse same sheet in
+          multiple HTML pages. You can define a style for each HTML element and
+          apply it to as many Web pages as you want.
+        </li>
+
+        <li>
+          Pages load faster - If you are using CSS, you do not need to write
+          HTML tag attributes every time. Just write one CSS rule of a tag and
+          apply it to all the occurrences of that tag. So less code means faster
+          download times.
+        </li>
+
+        <li>
+          Easy maintenance - To make a global change, simply change the style,
+          and all elements in all the web pages will be updated automatically.
+        </li>
+
+        <li>
+          Superior styles to HTML - CSS has a much wider array of attributes
+          than HTML, so you can give a far better look to your HTML page in
+          comparison to HTML attributes.
+        </li>
+
+        <li>
+          Multiple Device Compatibility - Style sheets allow content to be
+          optimized for more than one type of device. By using the same HTML
+          document, different versions of a website can be presented for
+          handheld devices such as PDAs and cell phones or for printing.
+        </li>
+
+        <li>
+          Global web standards - Now HTML attributes are being deprecated and it
+          is being recommended to use CSS. So its a good idea to start using CSS
+          in all the HTML pages to make them compatible to future browsers.
+        </li>
+      </ul>
+    </section>
+    <!--footer-->
+    <section class="footer">
+      <h3>About Us</h3>
+      <p>
+        This website was created by Hiba Altaf, Thanhbinh Nguyen, and Anas
+        Ahmed.<br />
+        The material on this page can only be used for academic purposes and the
+        authors must be accredited for all original content.
+      </p>
+      <div class="icons">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-linkedin"></i>
+      </div>
+    </section>
+  </body>
+</html>

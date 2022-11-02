@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name='viewport' content='with=device-width, initial-scale=1.0'>
+    <title>Agent Code</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous">
+<style>
+    * {
+        box-sizing: border-box;
+      }
+
+      /* Create two equal columns that floats next to each other */
+      .column {
+        float: left;
+        width: 50%;
+        padding: 10px;
+      }
+
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      /* Style the buttons */
+      .btn {
+        border: none;
+        outline: none;
+        padding: 12px 16px;
+        background-color: #f1f1f1;
+        cursor: pointer;
+      }
+
+      .btn:hover {
+        background-color: #ddd;
+      }
+      h1 {
+        text-align: center;
+      }
+      .main h2, h3{
+        text-align:left;
+      }
+      .footer h3{
+          text-align:center;
+      }
+      img {
+        display: block;
+      }
+
+      .btn.active {
+        background-color: #666;
+        color: white;
+      }
+
+      .table{
+          width:90%;
+          margin-left:5%;
+      }
+      .main{
+          width:90%;
+          margin-left:5%;
+          margin-top:none;
+          text-align:left;
+      }
+      .main img{
+          width:20%;
+          height:20%;
+          padding:20px;
+          min-width:500px;
+          min-height:120px;
+      }
+      
+    </style>
+</head>
+<body>
+    <!--header-->
+    <nav>
+        <a href='index.html'><img src='https://cdn.glitch.com/1ec3f49c-c727-4187-8082-d28c4e9b2889%2Flogo2.png?v=1629571616573'></a>
+        <div class="nav-links" id="navlinks">
+          <i class="fa fa-times" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="python_tutorial.html">Python</a></li>
+            <li><a href="javascript_tutorial.html">JavaScript</a></li>
+            <li><a href="html_css_tutorial.html">HTML/CSS</a></li>
+            <!-- <li><a href="game.html">Game</a></li> -->
+            <li><a href="project_ideas.html">Project Ideas</a></li>
+            <li><a href="more_resources.html">More Resources</a></li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+        
+    <!--body-->
+    <section class='main'>
+        <h1>Python Array</h1>
+        <p>
+        Arrays are data abstractions that are used to store items. They are very similiar to lists
+        and share many methods and properties, except they are more geared towards arithmetic computations. 
+        Furthermore, they come in handy when you want to perform similiar operations on an entire list of items.
+        One way to define an array is to import numpy and use the array() function to define an array.
+        Since cost was an array, we were able to easily every item in cost by 2 simply by dividing the array
+        itself by two. However, if cost was a list, then we would get a type error since python doesn't allow users 
+        to perform mathematical operations between data abstractions and numbers.
+        </p>
+        <img src='https://cdn.glitch.com/1ec3f49c-c727-4187-8082-d28c4e9b2889%2Fimg41.png?v=1629828577913'>
+        <p>Another key difference between lists and arrays is that arrays are usually used as containers
+        for elements of the same data types but lists can have different data types. But aside from these
+        two key differences, arrays and lists are very similiar so lists
+        are often used as arrays. But if you want to work with python 
+        arrays, you will have to import a library like the <a href='https://docs.python.org/3/library/array.html'>array</a> or <a href='https://numpy.org/doc/'>numpy</a> library.
+        </p>
+        <p>
+        To define arrays we will use the array library. Simply import array and then do array.array(). array() takes in
+        two parameters, a unicode that specifies the data type of the items in the array and a second parameter which is 
+        a list of all the items that will be passed into the array. So, define arrays as array.array(unicode,[items])
+        .Here is a table of some of the unicode characters-</p>
+        <img src='https://cdn.glitch.com/1ec3f49c-c727-4187-8082-d28c4e9b2889%2Fimg42.png?v=1629828585356'>
+        
+        </p>You can access values in the array
+        using indexing since arrays are 0-indexed. You can modify values in the array by using the format
+        array_name[index] = new_value to change the value corresponding to that array. Use the len() function
+        to find the length of an array. Arrays are iterable, so you can loop through them to access and change
+        items in the array. Below are some functions you can use on arrays. These methods may sound familiar since
+        they can also be used on lists. 
+        </p>
+        <p>append() - adds an element to the end of a list.<br>
+        copy() - returns a copy of the list.<br>
+        count() - takes in a parameter x and returns the number of elements with the value x.<br>
+        clear() - removes all the elements from the list.<br>
+        extend() - takes in multiple values and adds them to the end of the list.<br>
+        index() - takes in an item and returns the index of the first item with that specific value.<br>
+        insert() - takes in an index, value pair. Adds the specified value to the appropriate index in 
+        the list.<br>
+        pop() - takes in an optional index and removes the value at that index in the array.
+        If no index is specified, then it removes the last array item.<br>
+        remove() - takes in the name of an item and removes the first occurance of that item in 
+        the array.<br>
+        sort() - sorts the list alphabetically or from least to greatest by default. To reverse
+        these defaults, you can do sort(reverse=True).<br>
+        </p>
+        <img src='https://cdn.glitch.com/1ec3f49c-c727-4187-8082-d28c4e9b2889%2Fimg43.PNG?v=1629828608921'>
+        
+    </section>
+    <!--footer-->
+    <section class='footer'>
+        <h3>About Us</h3>
+        <p>This website was created by Hiba Altaf, Thanhbinh Nguyen, and Anas Ahmed.<br> The material on this page can only be used for academic purposes and the authors must be accredited for all original content.</p>
+        <div class='icons'>
+            <i class='fa fa-facebook'></i>
+            <i class='fa fa-twitter'></i>
+            <i class='fa fa-instagram'></i>
+            <i class='fa fa-linkedin'></i>
+        </div>
+    </section>
+<script>
+var navLinks = document.getElementById('navlinks');
+function showMenu(){
+    navlinks.style.right = '0';
+}
+function hideMenu(){
+    navlinks.style.right = '-150px';
+}
+
+</script>
+</body>
+
+</html>

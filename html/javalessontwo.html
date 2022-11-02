@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0" />
+    <title>Agent Code</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      /* Create two equal columns that floats next to each other */
+      .column {
+        float: left;
+        width: 50%;
+        padding: 10px;
+      }
+
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      /* Style the buttons */
+      .btn {
+        border: none;
+        outline: none;
+        padding: 12px 16px;
+        background-color: #f1f1f1;
+        cursor: pointer;
+      }
+      h2 {
+        text-align:center;
+      }
+
+      .btn:hover {
+        background-color: #ddd;
+      }
+      h1 {
+        text-align: center;
+      }
+      img {
+        display: block;
+      }
+
+      .btn.active {
+        background-color: #666;
+        color: white;
+      }
+
+      .table {
+        width: 90%;
+        margin-left: 5%;
+      }
+    </style>
+  </head>
+  <body>
+    <!--header-->
+    <nav>
+      <a href="index.html"
+        ><img
+          src="https://cdn.glitch.com/1ec3f49c-c727-4187-8082-d28c4e9b2889%2Flogo2.png?v=1629571616573"
+      /></a>
+      <div class="nav-links" id="navlinks">
+        <i class="fa fa-times" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="python_tutorial.html">Python</a></li>
+          <li><a href="javascript_tutorial.html">JavaScript</a></li>
+          <li><a href="html_css_tutorial.html">HTML/CSS</a></li>
+          <!-- <li><a href="game.html">Game</a></li> -->
+          <li><a href="project_ideas.html">Project Ideas</a></li>
+          <li><a href="more_resources.html">More Resources</a></li>
+        </ul>
+      </div>
+      <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+
+    <section class="table">
+      <div>
+        <p style="padding-left:40%;">
+          <img
+            src="https://www.ocpsoft.org/wp-content/uploads/2013/01/javascript_logo_unofficial.png"
+            alt="Logo"
+            width="300"
+            length="300"
+          />
+        </p>
+
+        <h2>
+          Generating Output in JavaScript
+        </h2>
+        <p>
+          There are certain situations in which you may need to generate output
+          from your JavaScript code. For example, you might want to see the
+          value of variable, or write a message to browser console to help you
+          debug an issue in your running JavaScript code, and so on. In
+          JavaScript there are several different ways of generating output
+          including writing output to the browser window or browser console,
+          displaying output in dialog boxes, writing output into an HTML
+          element, etc. We'll take a closer look at each of these in the
+          following sections.
+        </p>
+        <h2>
+          Writing Output to Browser Console
+        </h2>
+        <p>
+          You can easily outputs a message or writes data to the browser console
+          using the console.log() method. This is a simple, but very powerful
+          method for generating detailed output. Here's an example:
+        </p>
+        <p style="padding-left:30%;">
+          <img
+            src="https://i.ytimg.com/vi/GhQQlihbzFY/maxresdefault.jpg"
+            width="600px"
+            height="400px"
+          />
+        </p>
+      </div>
+    </section>
+
+    <section class="table">
+      <h2>
+        Displaying Output in Alert Dialog Boxes
+      </h2>
+      <p>
+        You can also use alert dialog boxes to display the message or output
+        data to the user. An alert dialog box is created using the alert()
+        method. Here's is an example:
+      </p>
+
+      <p style="padding-left:30%;">
+        <img
+          src="https://www.codegrepper.com/codeimages/window-alert-in-javascript.png"
+          width="600"
+          length="400"
+        />
+      </p>
+
+      <p>
+        During these formative years of the Web, web pages could only be static,
+        lacking the capability for dynamic behavior after the page was loaded in
+        the browser. There was a desire in the burgeoning web development scene
+        to remove this limitation, so in 1995, Netscape decided to add a
+        scripting language to Navigator. They pursued two routes to achieve
+        this: collaborating with Sun Microsystems to embed the Java programming
+        language, while also hiring Brendan Eich to embed the Scheme language.
+      </p>
+
+      <h2>
+        Writing Output to the Browser Window
+      </h2>
+
+      <p>
+        You can use the document.write() method to write the content to the
+        current document only while that document is being parsed. Here's an
+        example:
+      </p>
+      <p style="padding-left:30%;">
+        <img
+          src="https://cdn.glitch.com/05878508-358b-4f28-b8fe-f91183bc04d9%2FScreen%20Shot%202021-08-21%20at%2011.19.22%20PM.png?v=1629602589157"
+          width="600"
+          length="400"
+        />
+      </p>
+
+      <p>
+        If you use the document.write() method method after the page has been
+        loaded, it will overwrite all the existing content in that document.
+        Check out the following example:
+      </p>
+      <p style="padding-left:30%">
+        <img
+          src="https://cdn.glitch.com/05878508-358b-4f28-b8fe-f91183bc04d9%2FScreen%20Shot%202021-08-21%20at%2011.25.30%20PM.png?v=1629602752071"
+          width="600"
+          length="400"
+        />
+      </p>
+      <h2>
+        Inserting Output Inside an HTML Element
+      </h2>
+      <p>
+        You can also write or insert output inside an HTML element using the
+        element's innerHTML property. However, before writing the output first
+        we need to select the element using a method such as getElementById(),
+        as demonstrated in the following example:
+      </p>
+      <p style="padding-left:30%">
+        <img
+          src="https://cdn.glitch.com/05878508-358b-4f28-b8fe-f91183bc04d9%2FScreen%20Shot%202021-08-21%20at%2011.30.28%20PM.png?v=1629603044064"
+          width="600"
+          length="400"
+        />
+      </p>
+    </section>
+
+    <!--footer-->
+    <section class="footer">
+      <h3>About Us</h3>
+      <p>
+        This website was created by Hiba Altaf, Thanhbinh Nguyen, and Anas
+        Ahmed.<br />
+        The material on this page can only be used for academic purposes and the
+        authors must be accredited for all original content.
+      </p>
+      <div class="icons">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-linkedin"></i>
+      </div>
+    </section>
+  </body>
+</html>

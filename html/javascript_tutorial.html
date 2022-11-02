@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0" />
+    <title>Agent Code</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      /* Create two equal columns that floats next to each other */
+      .column {
+        float: left;
+        width: 50%;
+        padding: 10px;
+      }
+
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      /* Style the buttons */
+      .btn {
+        border: none;
+        outline: none;
+        padding: 12px 16px;
+        background-color: #f1f1f1;
+        cursor: pointer;
+      }
+
+      .btn:hover {
+        background-color: #ddd;
+      }
+      h1 {
+        text-align: center;
+      }
+      img {
+        display: block;
+      }
+
+      .btn.active {
+        background-color: #666;
+        color: white;
+      }
+
+      .table {
+        width: 90%;
+        margin-left: 5%;
+      }
+    </style>
+  </head>
+  <body>
+    <!--header-->
+    <nav>
+      <a href="index.html"
+        ><img
+          src="https://cdn.glitch.com/1ec3f49c-c727-4187-8082-d28c4e9b2889%2Flogo2.png?v=1629571616573"
+      /></a>
+      <div class="nav-links" id="navlinks">
+        <i class="fa fa-times" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="python_tutorial.html">Python</a></li>
+          <li><a href="javascript_tutorial.html">JavaScript</a></li>
+          <li><a href="html_css_tutorial.html">HTML/CSS</a></li>
+          <!-- <li><a href="game.html">Game</a></li> -->
+          <li><a href="project_ideas.html">Project Ideas</a></li>
+          <li><a href="more_resources.html">More Resources</a></li>
+        </ul>
+      </div>
+      <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+
+    <section class="table">
+      <h1>JavaScript tutorial</h1>
+      <p>
+        We provide online tutorials suited to your javascript syntax, whether
+        you are a newbie looking to enter the field of game development and web
+        design or an programmer looking to enhance your products.
+      </p>
+      <p>
+        Our step-by-step instructions will teach you the fundamentals of
+        JavaScript with examples and exercises along the way so you can perfect
+        your understanding. Once you've finished our course, take the quiz to
+        test your understanding!
+      </p>
+      <div id="btnContainer">
+        <button class="btn" onclick="listView()">
+          <i class="fa fa-bars"></i> List
+        </button>
+        <button class="btn active" onclick="gridView()">
+          <i class="fa fa-th-large"></i> Grid
+        </button>
+      </div>
+      <br />
+      <div>
+        <div class="row">
+          <div class="column" style="background-color:#008080;">
+            <h2>Lesson 1:What is JavaScript?</h2>
+            <p><a href="javalessonone.html">Learn more</a></p>
+          </div>
+          <div class="column" style="background-color:#48d1cc;">
+            <h2>Lesson 2: JS Output</h2>
+            <p><a href="javalessontwo.html">Learn more</a></p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="column" style="background-color:#008080;">
+            <h2>Lesson 3: JS Syntax</h2>
+            <p><a href="javalessonthree.html">Learn more</a></p>
+          </div>
+          <div class="column" style="background-color:#48d1cc;">
+            <h2>Lesson 4: JS Numbers and Operators</h2>
+            <p><a href="javalessonfour.html">Learn more</a></p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="column" style="background-color:#008080;">
+            <h2>Lesson 5: JS Variables</h2>
+            <p><a href="javalessonfive.html">Learn more</a></p>
+          </div>
+          <div class="column" style="background-color:#48d1cc;">
+            <h2>Lesson 6: JS Array</h2>
+            <p><a href="javalessonsix.html">Learn more</a></p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="column" style="background-color:#008080;">
+            <h2>Lesson 7: JS Loops</h2>
+            <p><a href="javalessonseven.html">Learn more</a></p>
+          </div>
+          <div class="column" style="background-color:#48d1cc;">
+            <h2>Lesson 8: JS class</h2>
+            <p><a href="javalessoneight.html">Learn more</a></p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="column" style="background-color:#008080;">
+            <h2>Lesson 9: JSON</h2>
+            <p><a href="javalessonnine.html">Learn more</a></p>
+          </div>
+          <div class="column" style="background-color:#48d1cc;">
+            <h2>Lesson 10: Take a Quiz</h2>
+            <p><a href="javaquiz.html">Start</a></p>
+          </div>
+        </div>
+
+        <br />
+      </div>
+    </section>
+
+    <!--footer-->
+    <section class="footer">
+      <h3>About Us</h3>
+      <p>
+        This website was created by Hiba Altaf, Thanhbinh Nguyen, and Anas
+        Ahmed.<br />
+        The material on this page can only be used for academic purposes and the
+        authors must be accredited for all original content.
+      </p>
+      <div class="icons">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-linkedin"></i>
+      </div>
+    </section>
+    <script>
+      var navLinks = document.getElementById("navlinks");
+      function showMenu() {
+        navlinks.style.right = "0";
+      }
+      function hideMenu() {
+        navlinks.style.right = "-150px";
+      }
+      // Get the elements with class="column"
+      var elements = document.getElementsByClassName("column");
+
+      // Declare a loop variable
+      var i;
+
+      // List View
+      function listView() {
+        for (i = 0; i < elements.length; i++) {
+          elements[i].style.width = "100%";
+        }
+      }
+
+      // Grid View
+      function gridView() {
+        for (i = 0; i < elements.length; i++) {
+          elements[i].style.width = "50%";
+        }
+      }
+
+      /* Optional: Add active class to the current button (highlight it) */
+      var container = document.getElementById("btnContainer");
+      var btns = container.getElementsByClassName("btn");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+          var current = document.getElementsByClassName("active");
+          current[0].className = current[0].className.replace(" active", "");
+          this.className += " active";
+        });
+      }
+    </script>
+  </body>
+</html>

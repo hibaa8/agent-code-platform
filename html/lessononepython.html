@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name='viewport' content='with=device-width, initial-scale=1.0'>
+    <title>Agent Code</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous">
+<style>
+    * {
+        box-sizing: border-box;
+      }
+
+      /* Create two equal columns that floats next to each other */
+      .column {
+        float: left;
+        width: 50%;
+        padding: 10px;
+      }
+
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      /* Style the buttons */
+      .btn {
+        border: none;
+        outline: none;
+        padding: 12px 16px;
+        background-color: #f1f1f1;
+        cursor: pointer;
+      }
+
+      .btn:hover {
+        background-color: #ddd;
+      }
+      h1 {
+        text-align: center;
+      }
+      img {
+        display: block;
+      }
+
+      .btn.active {
+        background-color: #666;
+        color: white;
+      }
+
+      .table{
+          width:90%;
+          margin-left:5%;
+      }
+      .main{
+          width:90%;
+          margin-left:5%;
+          margin-top:none;
+          align:center;
+      }
+      .main img{
+          padding:20px;
+         
+      }
+      #img-1{
+        width:15%;
+        height:15%;
+        margin-left:40%;
+      }
+      #img-2{
+        width:30%;
+        height:30%;
+        
+      }
+      
+    </style>
+</head>
+<body>
+    <!--header-->
+    <nav>
+        <a href="index.html"><img src="https://cdn.glitch.com/1ec3f49c-c727-4187-8082-d28c4e9b2889%2Flogo2.png?v=1629571616573"/></a>
+        <div class="nav-links" id="navlinks">
+          <i class="fa fa-times" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="python_tutorial.html">Python</a></li>
+            <li><a href="javascript_tutorial.html">JavaScript</a></li>
+            <li><a href="html_css_tutorial.html">HTML/CSS</a></li>
+            <!-- <li><a href="game.html">Game</a></li> -->
+            <li><a href="project_ideas.html">Project Ideas</a></li>
+            <li><a href="more_resources.html">More Resources</a></li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+        
+    <!--body-->
+    <section class='main'>
+      <h1>Lesson 1: What is Python?</h1>
+      <p>
+        Python is an interpreted, object-oriented, high-level programming language
+        with dynamic semantics. Its high-level built in data structures, combined
+        with dynamic typing and dynamic binding, make it very attractive for Rapid
+        Application Development, as well as for use as a scripting or glue
+        language to connect existing components together. Python's simple, easy to
+        learn syntax emphasizes readability and therefore reduces the cost of
+        program maintenance. Python supports modules and packages, which
+        encourages program modularity and code reuse. The Python interpreter and
+        the extensive standard library are available in source or binary form
+        without charge for all major platforms, and can be freely distributed.
+      </p>
+
+      <img class='img' id='img-1'
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/2048px-Python-logo-notext.svg.png"
+        width="350"
+        length="125"
+      />
+      <h2>Python debugging</h2>
+      <p>
+        Often, programmers fall in love with Python because of the increased
+        productivity it provides. Since there is no compilation step, the
+        edit-test-debug cycle is incredibly fast. Debugging Python programs is
+        easy: a bug or bad input will never cause a segmentation fault. Instead,
+        when the interpreter discovers an error, it raises an exception. When the
+        program doesn't catch the exception, the interpreter prints a stack trace.
+        A source level debugger allows inspection of local and global variables,
+        evaluation of arbitrary expressions, setting breakpoints, stepping through
+        the code a line at a time, and so on. The debugger is written in Python
+        itself, testifying to Python's introspective power. On the other hand,
+        often the quickest way to debug a program is to add a few print statements
+        to the source: the fast edit-test-debug cycle makes this simple approach
+        very effective.
+      </p>
+      <br>
+      <h2>Python 2 and 3</h2>
+      <p>
+      There are two major Python versions, Python 2 and Python 3. Python 2 and 3
+      are quite different. This tutorial uses Python 3, because it more
+      semantically correct and supports newer features. For example, one difference between Python 2 and 3 is the print statement.
+      In Python 2, the "print" statement is not a function, and therefore it is
+      invoked without parentheses. However, in Python 3, it is a function, and
+      must be invoked with parentheses.
+      </p>
+
+      <h2>Print statement</h2>
+      <p>
+      Python is a very simple language, and has a very straightforward syntax.
+      It encourages programmers to program without boilerplate (prepared) code.
+      The simplest directive in Python is the "print" directive - it simply
+      prints out a line (and also includes a newline, unlike in C).
+      </p>
+      <p>To print a string in Python 3, just write:</p>
+      <img class='img' id='img-2' src="https://www.udacity.com/blog/wp-content/uploads/2020/11/Hello-World_Blog-scaled.jpeg"/>
+    </section>
+    <!--footer-->
+    <section class='footer'>
+        <h3>About Us</h3>
+        <p>This website was created by Hiba Altaf, Thanhbinh Nguyen, and Anas Ahmed.<br> The material on this page can only be used for academic purposes and the authors must be accredited for all original content.</p>
+        <div class='icons'>
+            <i class='fa fa-facebook'></i>
+            <i class='fa fa-twitter'></i>
+            <i class='fa fa-instagram'></i>
+            <i class='fa fa-linkedin'></i>
+        </div>
+    </section>
+<script>
+var navLinks = document.getElementById('navlinks');
+function showMenu(){
+    navlinks.style.right = '0';
+}
+function hideMenu(){
+    navlinks.style.right = '-150px';
+}
+
+</script>
+</body>
+
+</html>

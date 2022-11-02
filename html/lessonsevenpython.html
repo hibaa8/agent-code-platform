@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name='viewport' content='with=device-width, initial-scale=1.0'>
+    <title>Agent Code</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous">
+<style>
+    * {
+        box-sizing: border-box;
+      }
+
+      /* Create two equal columns that floats next to each other */
+      .column {
+        float: left;
+        width: 50%;
+        padding: 10px;
+      }
+
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      /* Style the buttons */
+      .btn {
+        border: none;
+        outline: none;
+        padding: 12px 16px;
+        background-color: #f1f1f1;
+        cursor: pointer;
+      }
+
+      .btn:hover {
+        background-color: #ddd;
+      }
+      h1 {
+        text-align: center;
+      }
+      .main h2, h3{
+        text-align:left;
+      }
+      .footer h3{
+          text-align:center;
+      }
+      img {
+        display: block;
+      }
+
+      .btn.active {
+        background-color: #666;
+        color: white;
+      }
+
+      .table{
+          width:90%;
+          margin-left:5%;
+      }
+      .main{
+          width:90%;
+          margin-left:5%;
+          margin-top:none;
+          text-align:left;
+      }
+      .main img{
+          width:20%;
+          height:20%;
+          padding:20px;
+          min-width:500px;
+          min-height:120px;
+      }
+      
+    </style>
+</head>
+<body>
+    <!--header-->
+    <nav>
+        <a href='index.html'><img src='https://cdn.glitch.com/1ec3f49c-c727-4187-8082-d28c4e9b2889%2Flogo2.png?v=1629571616573'></a>
+        <div class="nav-links" id="navlinks">
+          <i class="fa fa-times" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="python_tutorial.html">Python</a></li>
+            <li><a href="javascript_tutorial.html">JavaScript</a></li>
+            <li><a href="html_css_tutorial.html">HTML/CSS</a></li>
+            <!-- <li><a href="game.html">Game</a></li> -->
+            <li><a href="project_ideas.html">Project Ideas</a></li>
+            <li><a href="more_resources.html">More Resources</a></li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+        
+    <!--body-->
+    <section class='main'>
+        <h1>Python Lists</h1>
+        <p>Lists are used to store multiple items in one variable. 
+        They are one of the four data abstractions, meaning they are used to college data.
+        They are defined using square brackets and have values inside seperated by commas.
+        </p>
+        <p>
+        List items are ordered, changeable, and allow for duplicate values.
+        Lists are 0 indexed so the first item has an index of 1, second item has a index of 1, third has an index of 2 and so forth.
+        The last item also has an additional index of -1. You can use the format list_name[index] to find the list value at
+        that particular index. List items can be of any data type, string, integer, float, boolean, etc.
+        </p>
+        <p>Lists are ordered bmeaning the items have a defined order in which they are organized and that order will not change.
+        New items are always placed at the end of the list unless they are inserted at a particular index in which case they do change the order
+        of the list. Lists are also changeable meaning we can add, remove, and replace items in the list after it has been 
+        created. Lists also allow for duplicates so we can have multiple items of the same value.
+        </p>
+        <img src='https://cdn.glitch.com/1ec3f49c-c727-4187-8082-d28c4e9b2889%2Fimg22.PNG?v=1629658732328'>
+        <p>To find the length of a list, use the len() keyword and pass in the list name as the parameter.</p>
+        <img src='https://cdn.glitch.com/1ec3f49c-c727-4187-8082-d28c4e9b2889%2Fimg23.PNG?v=1629658735001'>
+        <p>You can convert other data abstractions like tuples, dictionaries, and sets into lists 
+        by using the list() function and passing in the data abstraction as a parameter.</p>
+        <img src='https://cdn.glitch.com/1ec3f49c-c727-4187-8082-d28c4e9b2889%2Fimg24.PNG?v=1629658746445'>
+        <p> To change a list item, find the index of the item you want to change and do
+        list_name[index] = new_value to change the value at that index. You can also change a range of
+        item values by doing list_name[first_index:last_index] = [new_value, new_value..] where the first index
+        corresponds to the first value you want to change and the last index is for the last value you want to replace.
+        <p> To add new values to a list, use .append() in the format list_name.append(new_value).<br>Use
+        .extend() if you want to add multiple new values or if you want to combine the values in two data types like list and 
+        tuples.<br> Use .insert() in the format this_list.insert(index, new_value) if
+        you don't want to add the value to the end of the list and at a particular index instead.<br> Use list_name.pop(index) to remove items
+        by index or .remove(item_name) to remove items by value.<nr>Finally, use .index(item_name) to find the value of a particular index of 
+        an item.
+        <img src='https://cdn.glitch.com/1ec3f49c-c727-4187-8082-d28c4e9b2889%2Fimg30.PNG?v=1629658807902'>
+    </section>
+    <!--footer-->
+    <section class='footer'>
+        <h3>About Us</h3>
+        <p>This website was created by Hiba Altaf, Thanhbinh Nguyen, and Anas Ahmed.<br> The material on this page can only be used for academic purposes and the authors must be accredited for all original content.</p>
+        <div class='icons'>
+            <i class='fa fa-facebook'></i>
+            <i class='fa fa-twitter'></i>
+            <i class='fa fa-instagram'></i>
+            <i class='fa fa-linkedin'></i>
+        </div>
+    </section>
+<script>
+var navLinks = document.getElementById('navlinks');
+function showMenu(){
+    navlinks.style.right = '0';
+}
+function hideMenu(){
+    navlinks.style.right = '-150px';
+}
+
+</script>
+</body>
+
+</html>

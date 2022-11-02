@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name='viewport' content='with=device-width, initial-scale=1.0'>
+    <title>Agent Code</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous">
+<style>
+    * {
+        box-sizing: border-box;
+      }
+
+      /* Create two equal columns that floats next to each other */
+      .column {
+        float: left;
+        width: 50%;
+        padding: 10px;
+      }
+
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      /* Style the buttons */
+      .btn {
+        border: none;
+        outline: none;
+        padding: 12px 16px;
+        background-color: #f1f1f1;
+        cursor: pointer;
+      }
+
+      .btn:hover {
+        background-color: #ddd;
+      }
+      h1 {
+        text-align: center;
+      }
+      .main h2, h3{
+        text-align:left;
+      }
+      .footer h3{
+          text-align:center;
+      }
+      img {
+        display: block;
+      }
+
+      .btn.active {
+        background-color: #666;
+        color: white;
+      }
+
+      .table{
+          width:90%;
+          margin-left:5%;
+      }
+      .main{
+          width:90%;
+          margin-left:5%;
+          margin-top:none;
+          text-align:left;
+      }
+      .main img{
+          width:60%;
+          height:60%;
+          padding:20px;
+          min-width:500px;
+          min-height:120px;
+      }
+      
+    </style>
+</head>
+<body>
+    <!--header-->
+    <nav>
+        <a href='index.html'><img src='https://cdn.glitch.com/1ec3f49c-c727-4187-8082-d28c4e9b2889%2Flogo2.png?v=1629571616573'></a>
+        <div class="nav-links" id="navlinks">
+          <i class="fa fa-times" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="python_tutorial.html">Python</a></li>
+            <li><a href="javascript_tutorial.html">JavaScript</a></li>
+            <li><a href="html_css_tutorial.html">HTML/CSS</a></li>
+            <!-- <li><a href="game.html">Game</a></li> -->
+            <li><a href="project_ideas.html">Project Ideas</a></li>
+            <li><a href="more_resources.html">More Resources</a></li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+        
+    <!--body-->
+    <section class='main'>
+        <h1>Python Functions</h1>
+        <p>
+        Functions are blocks of code that run when called. The benefit of using functions is that if you
+        want to rerun code that you've already written, you wont have to rewrite or copy paste it. Repeating code
+        is considered a bad coding practice and can easily be avoided by using functions. With functions, you can 
+        store a block of code in a function and rerun it simply by calling the function. 
+        </p>
+        <img src='https://cdn.glitch.com/1ec3f49c-c727-4187-8082-d28c4e9b2889%2Fimg59.PNG?v=1629828773718'>
+        <p>Python functions are defined with the 'def' keyword followed by the name of the function. After that 
+        come any parameters or global variables(variables defined outside of the function) that will be used locally inside of the function. 
+        After than comes a colan which defines the start of the body of the function. On the lines below this function,
+        any indented code falls inside of the function. If any variables are defined inside of a function, they have a local
+        scope, meaning they cannot be used outside of the function unless they are returned. You can return a local variable by
+        doing return local_variable_name. However, remember that returning a variable will break you outside of the function so any
+        code that follows the return statement will not be executed, which is why return statements are ussually on the last line of the
+        function. You can also use other keyword like break, continue, and pass inside functions and they have the same functionality
+        mentioned in the <a href='lessontwelvepython.html'>loops lesson</a>. Finally, to 
+        call a function, simply write function_name() and the code within will be printed.
+        </p>
+        <img src='https://cdn.glitch.com/1ec3f49c-c727-4187-8082-d28c4e9b2889%2Fimg60.PNG?v=1629828781707'>
+        <img src='https://cdn.glitch.com/1ec3f49c-c727-4187-8082-d28c4e9b2889%2Fimg61.PNG?v=1629828788790'>
+        <p>
+        You can pass in any iterable, variable, or data type as an argument into a function. Arguments
+        are typically passed in when a function is called.There are also different types of parameters <br>
+        Keyword parameters are set using key=value syntax where the key is the parameter name. 
+        These arguments are defined when calling the function and the order in which they are defined does not matter. 
+        </p>
+        <img src='https://cdn.glitch.com/1ec3f49c-c727-4187-8082-d28c4e9b2889%2Fimg62.PNG?v=1629828795414'>
+        <p>
+        Default parameters are when parameters are assigned a default value in the function definition. So, the function can
+        be called without assigning a specific value to that parameter because it already has a default value. But if a value is
+        passed in for that parameter in the function call, then if will overwrite the default value.
+        </p>
+        <img src='https://cdn.glitch.com/1ec3f49c-c727-4187-8082-d28c4e9b2889%2Fimg65.PNG?v=1629828815708'>
+        <p>
+        Arbitrary arguments can be passed in when you don't know how many parameters will be passed into the function.
+        *args is used when you don't know how many parameters will be passed into the function call. **kwargs are used
+        when you don't know how many keyword arguments will be passed into the function call
+        </p>
+        <img src='https://cdn.glitch.com/1ec3f49c-c727-4187-8082-d28c4e9b2889%2Fimg63.PNG?v=1629828802597'>
+        <img src='https://cdn.glitch.com/1ec3f49c-c727-4187-8082-d28c4e9b2889%2Fimg64.PNG?v=1629828809152'>
+    </section>
+    <!--footer-->
+    <section class='footer'>
+        <h3>About Us</h3>
+        <p>This website was created by Hiba Altaf, Thanhbinh Nguyen, and Anas Ahmed.<br> The material on this page can only be used for academic purposes and the authors must be accredited for all original content.</p>
+        <div class='icons'>
+            <i class='fa fa-facebook'></i>
+            <i class='fa fa-twitter'></i>
+            <i class='fa fa-instagram'></i>
+            <i class='fa fa-linkedin'></i>
+        </div>
+    </section>
+<script>
+var navLinks = document.getElementById('navlinks');
+function showMenu(){
+    navlinks.style.right = '0';
+}
+function hideMenu(){
+    navlinks.style.right = '-150px';
+}
+
+</script>
+</body>
+
+</html>

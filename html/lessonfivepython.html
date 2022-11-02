@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name='viewport' content='with=device-width, initial-scale=1.0'>
+    <title>Agent Code</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous">
+<style>
+    * {
+        box-sizing: border-box;
+      }
+
+      /* Create two equal columns that floats next to each other */
+      .column {
+        float: left;
+        width: 50%;
+        padding: 10px;
+      }
+
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      /* Style the buttons */
+      .btn {
+        border: none;
+        outline: none;
+        padding: 12px 16px;
+        background-color: #f1f1f1;
+        cursor: pointer;
+      }
+
+      .btn:hover {
+        background-color: #ddd;
+      }
+      h1 {
+        text-align: center;
+      }
+      .main h2, h3{
+        text-align:left;
+      }
+      .footer h3{
+          text-align:center;
+      }
+      img {
+        display: block;
+      }
+
+      .btn.active {
+        background-color: #666;
+        color: white;
+      }
+
+      .table{
+          width:90%;
+          margin-left:5%;
+      }
+      .main{
+          width:90%;
+          margin-left:5%;
+          margin-top:none;
+          text-align:left;
+      }
+      .main img{
+          width:30%;
+          height:30%;
+          padding:20px;
+          min-width:600px;
+          min-height:150px;
+      }
+      
+    </style>
+</head>
+<body>
+    <!--header-->
+    <nav>
+        <a href="index.html"><img src="https://cdn.glitch.com/1ec3f49c-c727-4187-8082-d28c4e9b2889%2Flogo2.png?v=1629571616573"/></a>
+        <div class="nav-links" id="navlinks">
+          <i class="fa fa-times" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="python_tutorial.html">Python</a></li>
+            <li><a href="javascript_tutorial.html">JavaScript</a></li>
+            <li><a href="html_css_tutorial.html">HTML/CSS</a></li>
+            <!-- <li><a href="game.html">Game</a></li> -->
+            <li><a href="project_ideas.html">Project Ideas</a></li>
+            <li><a href="more_resources.html">More Resources</a></li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+        
+    <!--body-->
+    <section class='main'>
+        <h1>Python Variables and Data Types</h1>
+        <h2>Variables</h2>
+        <p>Variables are containers for storing values. In Python, you can easily declare variables by
+        assigning a value to a name. Variables do not need to be declared with any keywords or specified
+        data types, python will figure out those parts.</p>
+        <p>Here are some examples of variables. We encourage you to type out the code below for practice. Also, you can
+        print out the variables to check what values were stored in them.</p>
+        <img src='https://cdn.glitch.com/1ec3f49c-c727-4187-8082-d28c4e9b2889%2Fimg11.png?v=1629658629926'>
+        <h2>Data Types</h2>
+        <p>Variables can store data of differnt types and the char below categorizes these data types
+        into seven categories.</p>
+        <img src='https://cdn.glitch.com/1ec3f49c-c727-4187-8082-d28c4e9b2889%2Fimg12.png?v=1629658650991'>
+        <p>str - stands for string. Strings are any values wrapped in single or double quotes like 'Amy' or "park".</p>
+        <p>int - stands for integer. Examples of integers are 67, 0, -15.</p>
+        <p>float - stands for decimal. Examples of decimals are 0.16, 3.4, -0.99.</p>
+        <p>complex - represent a mix of real and imaginary numbers. Examples of compex numbers are 1j, 2 + 4j.</p>
+        <p>list - an ordered, changeable data abstraction used to store values. Surrounded by two square brackets. An example of a list is [1, -0.8, 'A', True].</p>
+        <p>tuple - an ordered and unchangeable data abstraction stored to store values. Surrounded by two parenthesis. An example of a tuple is (1,-0.8, 'A', True).</p>
+        <p>dict - an ordered, changeable data abstraction used to store key:value pairs. Surrounded by curly braces. An example of a dictionary is {name:'Sam', grade:10, city:'New Jersey'}</p>
+        <p>set - an unordered and unindexed data abstraction used to store values. An example of a set is {'apples','bananas','cherries'}</p>
+        <p>The other data types are quite uncommon, especially for students who are just starting out with computer science so we will not delve into them.
+        You will learn about these data types in more detail in future lessons, right now we are just hitting the tip of the iceberg.
+        </p>
+        <p>You can find the data type of the value assigned to a 
+        variable by using the type() function. Pass in the variable as a parameter 
+        and it will return the appropriate data type</p>
+        <img src='https://cdn.glitch.com/1ec3f49c-c727-4187-8082-d28c4e9b2889%2Fimg13.png?v=1629658658376'>
+        <h2>Casting</h2>
+        <p>Casting is the process of changing the data types of variables</p>
+        <p>str(x) will turn the data type of x to a string.</p>
+        <p>int(x) will turn the data type of x to an integer</p>
+        <p>float(x) will turn the data type of x to a float</p>
+        <img src='https://cdn.glitch.com/1ec3f49c-c727-4187-8082-d28c4e9b2889%2Fimg14.png?v=1629658667711'>
+        <img src='https://cdn.glitch.com/1ec3f49c-c727-4187-8082-d28c4e9b2889%2Fimg15.png?v=1629658672459'>
+        <h2>Concatenation</h2>
+        <p>Concatenation is the process of combining or adding two variables. The variables you add must be of the same data type or else the computer
+        will throw an error.</p>
+        <p>So, do not add integers to strings. Use the str() keyword to convert the integers to strings before adding them together. Similiarly, don't add booleans to strings. 
+        You can add booleans to integers though its still good coding practice to convert them both to one data type.</p>
+        <img src='https://cdn.glitch.com/1ec3f49c-c727-4187-8082-d28c4e9b2889%2Fimg16.PNG?v=1629658679723'>
+        <p>If you don't like casting and find it to be unnecessarily tedious, you can use f-strings instead.</p>
+        <img src='https://cdn.glitch.com/1ec3f49c-c727-4187-8082-d28c4e9b2889%2Fimg17.PNG?v=1629658696691'>
+    </section>
+    <!--footer-->
+    <section class='footer'>
+        <h3>About Us</h3>
+        <p>This website was created by Hiba Altaf, Thanhbinh Nguyen, and Anas Ahmed.<br> The material on this page can only be used for academic purposes and the authors must be accredited for all original content.</p>
+        <div class='icons'>
+            <i class='fa fa-facebook'></i>
+            <i class='fa fa-twitter'></i>
+            <i class='fa fa-instagram'></i>
+            <i class='fa fa-linkedin'></i>
+        </div>
+    </section>
+<script>
+var navLinks = document.getElementById('navlinks');
+function showMenu(){
+    navlinks.style.right = '0';
+}
+function hideMenu(){
+    navlinks.style.right = '-150px';
+}
+
+</script>
+</body>
+
+</html>

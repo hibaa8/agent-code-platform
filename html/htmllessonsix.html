@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0" />
+    <title>Agent Code</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      /* Create two equal columns that floats next to each other */
+      .column {
+        float: left;
+        width: 50%;
+        padding: 10px;
+      }
+
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      /* Style the buttons */
+      .btn {
+        border: none;
+        outline: none;
+        padding: 12px 16px;
+        background-color: #f1f1f1;
+        cursor: pointer;
+      }
+
+      .btn:hover {
+        background-color: #ddd;
+      }
+      h1 {
+        text-align: center;
+      }
+      img {
+        display: block;
+      }
+
+      .btn.active {
+        background-color: #666;
+        color: white;
+      }
+
+      .table {
+        width: 90%;
+        margin-left: 5%;
+      }
+    </style>
+  </head>
+  <body>
+    <!--header-->
+    <nav>
+      <a href="index.html"
+        ><img
+          src="https://cdn.glitch.com/1ec3f49c-c727-4187-8082-d28c4e9b2889%2Flogo2.png?v=1629571616573"
+      /></a>
+      <div class="nav-links" id="navlinks">
+        <i class="fa fa-times" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="python_tutorial.html">Python</a></li>
+          <li><a href="javascript_tutorial.html">JavaScript</a></li>
+          <li><a href="html_css_tutorial.html">HTML/CSS</a></li>
+          <!-- <li><a href="game.html">Game</a></li> -->
+          <li><a href="project_ideas.html">Project Ideas</a></li>
+          <li><a href="more_resources.html">More Resources</a></li>
+        </ul>
+      </div>
+      <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+    <section class="table">
+      <p style="padding-left:40%;">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png"
+          width="300"
+          length="300"
+        />
+      </p>
+      <h2>Use of Lists in HTML</h2>
+      <p>
+        Similarly to tables, lists are used on websites to arrange information.
+        In HTML, you can make two types of lists:
+      </p>
+      <ul>
+        <li>
+          Unordered lists: Lists that have no chronological order where list
+          items are defined by bullet points
+        </li>
+        <li>
+          Ordered lists: Lists that follow a chronological order where list
+          items are defined by numbers
+        </li>
+      </ul>
+      <img
+        src="https://www.w3docs.com/uploads/media/default/0001/01/f79ee5dc2b2caadbea97e73eab152db65e868539.png"
+      />
+
+      <h2>< Table > Tag</h2>
+      <p>
+        Tables are defined by the < table > tag. To begin building a table., you
+        would nest the < table > tag in the < body > of your HTML page.
+      </p>
+
+      <p><b><</b><b>body</b><b>></b></p>
+      <p>....<b><</b><b>table</b><b>></b></p>
+      <p>....<b><</b><b>/table</b><b>></b> < / table ></p>
+      <p><b><</b><b>/body</b><b>></b></p>
+
+      <p>
+        The above code does not make a table functional because you have not
+        added the rows, columns, and content, but it provides the basis for a
+        table.
+      </p>
+
+      <h2>Adding Column Headers To Our Tables</h2>
+      <p>
+        In order for the columns in our tables to have their own headers, we use
+        the ><b><</b><b>th</b><b>></b> tag to define them and nest them into our
+        <b><</b><b>table</b><b>></b> tag.
+      </p>
+      <p>By default, table headings are bold and centered.</p>
+
+      <p>
+        In order for us to add additional rows to our table, we continue to
+        reuse the <b><</b><b>tr</b><b>></b> tag to continue to define each of
+        the rows.
+      </p>
+
+      <p>
+        However, to populate each row cell with data, we nest that cell in
+        <b><</b><b>td</b><b>></b> tags in order for them to appear in their
+        respective column. The <b><</b><b>td</b><b>></b> elements are the data
+        containers of the table.
+      </p>
+
+      <p>
+        For example, let’s say we wanted to add two rows to our tables and make
+        sure that each of the columns in the row had content, we’d model the
+        code as follows:
+      </p>
+
+      <img src="https://lenadesign.org/wp-content/uploads/2021/02/table.jpg" />
+
+      <h2>Naming Your Table</h2>
+      <p>You can use the < caption > tag to give your table a title.</p>
+
+      <p>
+        The < caption > tag must be immediately placed after the opening < table
+        > tag.
+      </p>
+
+      <p>
+        For example, if we wanted to name this table Test Table, we would
+        include a < caption > tag as follows:
+      </p>
+    </section>
+    <!--footer-->
+    <section class="footer">
+      <h3>About Us</h3>
+      <p>
+        This website was created by Hiba Altaf, Thanhbinh Nguyen, and Anas
+        Ahmed.<br />
+        The material on this page can only be used for academic purposes and the
+        authors must be accredited for all original content.
+      </p>
+      <div class="icons">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-linkedin"></i>
+      </div>
+    </section>
+  </body>
+</html>

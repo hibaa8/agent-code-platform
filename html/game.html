@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name='viewport' content='with=device-width, initial-scale=1.0'>
+    <title>Agent Code</title>
+    <link rel='stylesheet' href='../css/style.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+</head>
+<body>
+ <nav>
+      <a href="index.html"><img src="https://cdn.glitch.com/1ec3f49c-c727-4187-8082-d28c4e9b2889%2Flogo2.png?v=1629571616573"/></a>
+      <div class="nav-links" id="navlinks">
+        <i class="fa fa-times" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="python_tutorial.html">Python</a></li>
+          <li><a href="javascript_tutorial.html">JavaScript</a></li>
+          <li><a href="html_css_tutorial.html">HTML/CSS</a></li>
+          <!-- <li><a href="game.html">Game</a></li> -->
+          <li><a href="project_ideas.html">Project Ideas</a></li>
+          <li><a href="more_resources.html">More Resources</a></li>
+        </ul>
+      </div>
+      <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+
+    <h2 style="text-align:center; margin-top:3%;">The game is currently under construction. Please check back later!</h2>
+    <img style="width:15%; height:15%; margin-left:43%;margin-top:5%;" src="../images/under_construction.png">
+    <!-- <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script> -->
+
+    <!-- <style type="text/css">
+      .container {
+        width: 1700px;
+        height: 950px;
+        background: #f2f3f3;
+        overflow: hidden;
+        position: relative;
+        margin: auto;
+      }
+      .stickboi {
+        width: 1570px;
+        height: 200px;
+        background: url("https://cdn.glitch.com/242c4edf-2afd-4a14-b0a6-15f7a4b9d65f%2Fstickboi.png?v=1629528233432")
+          no-repeat center;
+        background-size: #f2f3f3;
+        position: absolute;
+        right: 900px;
+        bottom: 50px;
+      }
+      #downarrow {
+        width: 210px;
+        height: 235px;
+        background: url("https://cdn.glitch.com/242c4edf-2afd-4a14-b0a6-15f7a4b9d65f%2Fdown.png?v=1629564617332")
+          no-repeat center;
+        background-size: #f2f3f3;
+        position: absolute;
+        right: 65px;
+        bottom: 0px;
+        border: none;
+        cursor: pointer;
+      }
+      #uparrow {
+        width: 210px;
+        height: 235px;
+        background: url("https://cdn.glitch.com/242c4edf-2afd-4a14-b0a6-15f7a4b9d65f%2Fup.png?v=1629564751658")
+          no-repeat center;
+        background-size: #f2f3f3;
+        position: absolute;
+        right: 65px;
+        bottom: 205px;
+        border: none;
+        cursor: pointer;
+      }
+      #leftarrow {
+        width: 210px;
+        height: 235px;
+        background: url("https://cdn.glitch.com/242c4edf-2afd-4a14-b0a6-15f7a4b9d65f%2Fleft.png?v=1629566727517")
+          no-repeat center;
+        background-size: #f2f3f3;
+        position: absolute;
+        left: 1310px;
+        bottom: 110px;
+        border: none;
+        cursor: pointer;
+      }
+      #rightarrow {
+        width: 210px;
+        height: 235px;
+        background: url("https://cdn.glitch.com/242c4edf-2afd-4a14-b0a6-15f7a4b9d65f%2Fright.png?v=1629566725441")
+          no-repeat center;
+        background-size: #f2f3f3;
+        position: absolute;
+        left: 1540px;
+        bottom: 110px;
+        border: none;
+        cursor: pointer;
+      }
+      #cloak1 {
+        box-sizing: content-box;
+        width: 300px;
+        height: 500px;
+        bottom: 8px;
+        left: 0px;
+        position: absolute;
+        border: solid #40a4a8 10px;
+      }
+      #cloak2 {
+        box-sizing: content-box;
+        width: 300px;
+        height: 500px;
+        bottom: 8px;
+        left: 450px;
+        position: absolute;
+        border: solid #40a4a8 10px;
+      }
+      #cloak3 {
+        box-sizing: content-box;
+        width: 300px;
+        height: 500px;
+        bottom: 8px;
+        left: 900px;
+        position: absolute;
+        border: solid #40a4a8 10px;
+      }
+      #instructions {
+        width: 210px;
+        height: 235px;
+        top: 4px;
+        position: absolute;
+        box-shadow: 4px 4px #40a4a8;
+        font-size: 20px;
+        font-weight: bold;
+      }
+      #scoreboard {
+        width: 210px;
+        height: 235px;
+        top: 4px;
+        position: absolute;
+        font-size: 20px;
+        font-weight: bold;
+        right: 90px;
+      }
+      #level1 {
+        width: 500px;
+        height: 140px;
+        background: url("https://cdn.glitch.com/1ec3f49c-c727-4187-8082-d28c4e9b2889%2Flevel1.png?v=1629654852699")
+          no-repeat center;
+        background-size: #f2f3f3;
+        position: absolute;
+        left: 550px;
+        top: 20px;
+        border: none;
+        cursor: pointer;
+      }
+      #object1 {
+        width: 149px;
+        height: 140px;
+        background: url("https://cdn.glitch.com/242c4edf-2afd-4a14-b0a6-15f7a4b9d65f%2Fbook.png?v=1629577303447")
+          no-repeat center;
+        background-size: #f2f3f3;
+        position: absolute;
+        right: 1520px;
+        bottom: 300px;
+        border: none;
+        cursor: pointer;
+      }
+      #object2 {
+        width: 500px;
+        height: 360px;
+        background: url("https://cdn.glitch.com/242c4edf-2afd-4a14-b0a6-15f7a4b9d65f%2Fpens.png?v=1629594676747")
+          no-repeat center;
+        background-size: #f2f3f3;
+        position: absolute;
+        right: 900px;
+        bottom: 250px;
+        border: none;
+        cursor: pointer;
+      }
+      #object3 {
+        width: 500px;
+        height: 360px;
+        background: url("https://cdn.glitch.com/242c4edf-2afd-4a14-b0a6-15f7a4b9d65f%2Ferasser.png?v=1629596828855")
+          no-repeat center;
+        background-size: #f2f3f3;
+        position: absolute;
+        right: 400px;
+        bottom: 250px;
+        border: none;
+        cursor: pointer;
+      }
+    </style>
+    <div class="container">
+      <div id="level1"></div>
+      <div class="stickboi"></div>
+      <div class="firsthouse"></div>
+      <button id="downarrow"></button>
+      <button id="uparrow"></button>
+      <button id="leftarrow"></button>
+      <button id="rightarrow"></button>
+      <div id="cloak1"></div>
+      <div id="instructions">
+        <p style="color: #111111; font-weight: bold; font-size: 20px;">
+          Use the arrow keys or the buttons on the website to move around. As
+          you move around, click the object inside the square to gain points
+          with your correct answers and break free to go to other sections.
+        </p>
+      </div>
+      <div id="scoreboard">
+        <p style="color: #111111; font-weight: bold; font-size: 20px;">
+          Score board:
+        </p>
+      </div>
+      <button id="object1" onclick="clickedBook()"></button>
+      <div id="cloak2"></div>
+      <button id="object2" onclick="clickedPen()"></button>
+      <div id="cloak3"></div>
+      <button id="object3" onclick="clickedEraser()"></button>
+    </div>
+    <script type="text/javascript">
+      var score = 0;
+      var x_axis = 0;
+      var y_axis = 0;
+      document.onkeydown = checkKeyOne;
+      function checkKeyOne(e) {
+        e = e || window.event;
+        if (e.keyCode == "40") {
+          // up
+          move_boi("up");
+        } else if (e.keyCode == "38") {
+          // down
+          move_boi("down");
+        } else if (e.keyCode == "37") {
+          // left
+          move_boi("left");
+        } else if (e.keyCode == "39") {
+          // right
+          move_boi("right");
+        }
+      }
+      document.getElementById("downarrow").onclick = function() {
+        move_boi("up");
+      };
+      document.getElementById("uparrow").onclick = function() {
+        move_boi("down");
+      };
+      document.getElementById("leftarrow").onclick = function() {
+        move_boi("left");
+      };
+      document.getElementById("rightarrow").onclick = function() {
+        move_boi("right");
+      };
+      function move_boi(a) {
+        if (a == "right") {
+          x_axis = x_axis + 5;
+          $(".stickboi").css({
+            transform: "translate(" + x_axis + "px," + y_axis + "px)"
+          });
+          console.log(x_axis);
+        } else if (a == "left") {
+          x_axis = x_axis - 5;
+          $(".stickboi").css({
+            transform: "translate(" + x_axis + "px," + y_axis + "px)"
+          });
+          console.log(x_axis);
+        } else if (a == "up") {
+          y_axis = y_axis + 5;
+          $(".stickboi").css({
+            transform: "translate(" + x_axis + "px," + y_axis + "px)"
+          });
+          console.log(y_axis);
+        } else if (a == "down") {
+          y_axis = y_axis - 5;
+          $(".stickboi").css({
+            transform: "translate(" + x_axis + "px," + y_axis + "px)"
+          });
+          console.log(y_axis);
+        }
+      }
+      function clickedBook() {
+        var booked = document.getElementById("cloak1");
+        let object = prompt(
+          'What will print?\n int num = 16;\n print("I am " + num + "!")\n 😉Hint😉: Complete the phrase: I am ___'
+        );
+        if (object == null || object == "") {
+          // clickedBook();
+        } else if (object == "I am 16!") {
+          score = score + 1;
+          text = "Your score is " + score;
+          completed = "Book is completed";
+          booked.remove();
+        } else {
+          score = score - 1;
+          text = "Your score is " + score;
+        }
+        document.getElementById("scoreboard").innerHTML = text;
+      }
+      function clickedPen() {
+        var penned = document.getElementById("cloak2");
+        let object = prompt(
+          'Which is the correct way to print \'Hi!\' print(Hi!), print("Hi!"), or print("Hi!"); in Python?'
+        );
+        if (object == null || object == "") {
+          // clickedPen();
+        } else if (object == 'print("Hi!")') {
+          score = score + 1;
+          text = "Your score is " + score;
+          completed = "Pen is completed";
+          penned.remove();
+        } else {
+          score = score - 1;
+          text = "Your score is " + score;
+        }
+        document.getElementById("scoreboard").innerHTML = text;
+      }
+      function clickedEraser() {
+        var erasered = document.getElementById("cloak3");
+        let object = prompt(
+          "Which is the correct way to comment code #Hello this is a comment, /* Hello this is a comment*/, or // This is a comment; in Python?"
+        );
+        if (object == null || object == "") {
+          // clickedEraser();
+        } else if (object == "#Hello this is a comment") {
+          score = score + 1;
+          text = "Your score is " + score;
+          completed = "Eraser is completed";
+          erasered.remove();
+        } else {
+          score = score - 1;
+          text = "Your score is " + score;
+        }
+        document.getElementById("scoreboard").innerHTML = text;
+      }
+    </script> -->
+    <!--footer-->
+    <section style="margin-top:5%;" class='footer'>
+      <h3>About Us</h3>
+      <p>This website was created by Hiba Altaf, Thanhbinh Nguyen, and Anas Ahmed.<br> The material on this page can only be used for academic purposes and the authors must be accredited for all original content.</p>
+      <div class='icons'>
+          <i class='fa fa-facebook'></i>
+          <i class='fa fa-twitter'></i>
+          <i class='fa fa-instagram'></i>
+          <i class='fa fa-linkedin'></i>
+      </div>
+  </section>
+  </body>
+</html>

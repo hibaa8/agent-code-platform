@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0" />
+    <title>Agent Code</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      /* Create two equal columns that floats next to each other */
+      .column {
+        float: left;
+        width: 50%;
+        padding: 10px;
+      }
+
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      /* Style the buttons */
+      .btn {
+        border: none;
+        outline: none;
+        padding: 12px 16px;
+        background-color: #f1f1f1;
+        cursor: pointer;
+      }
+
+      .btn:hover {
+        background-color: #ddd;
+      }
+      h2 {
+        text-align: center;
+      }
+      img {
+        display: block;
+      }
+
+      .btn.active {
+        background-color: #666;
+        color: white;
+      }
+
+      .table {
+        width: 90%;
+        margin-left: 5%;
+      }
+    </style>
+  </head>
+  <body>
+    <!--header-->
+    <nav>
+      <a href="index.html"
+        ><img
+          src="https://cdn.glitch.com/1ec3f49c-c727-4187-8082-d28c4e9b2889%2Flogo2.png?v=1629571616573"
+      /></a>
+      <div class="nav-links" id="navlinks">
+        <i class="fa fa-times" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="python_tutorial.html">Python</a></li>
+          <li><a href="javascript_tutorial.html">JavaScript</a></li>
+          <li><a href="html_css_tutorial.html">HTML/CSS</a></li>
+          <!-- <li><a href="game.html">Game</a></li> -->
+          <li><a href="project_ideas.html">Project Ideas</a></li>
+          <li><a href="more_resources.html">More Resources</a></li>
+        </ul>
+      </div>
+      <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+
+    <section class="table">
+      <div>
+        <p style="padding-left:40%;">
+          <img
+            src="https://www.ocpsoft.org/wp-content/uploads/2013/01/javascript_logo_unofficial.png"
+            alt="Logo"
+            width="300"
+            length="300"
+          />
+        </p>
+
+        <h2>
+          What is JavaScript?
+        </h2>
+        <p>
+          JavaScript , often abbreviated as JS, is a programming language that
+          conforms to the ECMAScript specification.[10] JavaScript is
+          high-level, often just-in-time compiled, and multi-paradigm. It has
+          curly-bracket syntax, dynamic typing, prototype-based
+          object-orientation, and first-class functions. Alongside HTML and CSS,
+          JavaScript is one of the core technologies of the World Wide Web.Over
+          97% of websites use it client-side for web page behavior,[12] often
+          incorporating third-party libraries.[13] All major web browsers have a
+          dedicated JavaScript engine to execute the code on the user's device.
+          As a multi-paradigm language, JavaScript supports event-driven,
+          functional, and imperative programming styles. It has application
+          programming interfaces (APIs) for working with text, dates, regular
+          expressions, standard data structures, and the Document Object Model
+          (DOM). The ECMAScript standard does not include any input/output
+          (I/O), such as networking, storage, or graphics facilities. In
+          practice, the web browser or other runtime system provides JavaScript
+          APIs for I/O. JavaScript engines were originally used only in web
+          browsers, but they are now core components of other software systems,
+          most notably servers and a variety of applications. Although there are
+          similarities between JavaScript and Java, including language name,
+          syntax, and respective standard libraries, the two languages are
+          distinct and differ greatly in design.
+        </p>
+      </div>
+    </section>
+
+    <section class="table">
+      <h2>
+        History of JavaScript
+      </h2>
+      <p>
+        The Mosaic web browser was released in 1993. As the first browser with a
+        graphical user interface accessible to non-technical people, it played a
+        prominent role in the rapid growth of the nascent World Wide Web. The
+        lead developers of Mosaic then founded the Netscape corporation, which
+        released a more polished browser, Netscape Navigator, in 1994. Navigator
+        quickly became the most used browser.
+      </p>
+
+      <p style="padding-left:35%;">
+        <img
+          src="https://i.pcmag.com/imagery/encyclopedia-terms/mosaic-_mosaic.fit_lim.size_1050x.gif"
+        />
+      </p>
+
+      <p>
+        During these formative years of the Web, web pages could only be static,
+        lacking the capability for dynamic behavior after the page was loaded in
+        the browser. There was a desire in the burgeoning web development scene
+        to remove this limitation, so in 1995, Netscape decided to add a
+        scripting language to Navigator. They pursued two routes to achieve
+        this: collaborating with Sun Microsystems to embed the Java programming
+        language, while also hiring Brendan Eich to embed the Scheme language.
+      </p>
+
+      <p>
+        Netscape management soon decided that the best option was for Eich to
+        devise a new language, with syntax similar to Java and less like Scheme
+        or other extant scripting languages.Although the new language and its
+        interpreter implementation were called LiveScript when first shipped as
+        part of a Navigator beta in September 1995, the name was changed to
+        JavaScript for the official release in December.Eich claims that
+        HyperTalk syntax and handler names influenced JavaScript.
+      </p>
+
+      <p>
+        The choice of the JavaScript name has caused confusion, implying that it
+        is directly related to Java. Since Java was the hot new programming
+        language at the time, this has been characterized as a marketing ploy by
+        Netscape to give its own new language cachet.
+      </p>
+    </section>
+
+    <!--footer-->
+    <section class="footer">
+      <h3>About Us</h3>
+      <p>
+        This website was created by Hiba Altaf, Thanhbinh Nguyen, and Anas
+        Ahmed.<br />
+        The material on this page can only be used for academic purposes and the
+        authors must be accredited for all original content.
+      </p>
+      <div class="icons">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-linkedin"></i>
+      </div>
+    </section>
+  </body>
+</html>

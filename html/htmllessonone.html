@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0" />
+    <title>Agent Code</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      /* Create two equal columns that floats next to each other */
+      .column {
+        float: left;
+        width: 50%;
+        padding: 10px;
+      }
+
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      /* Style the buttons */
+      .btn {
+        border: none;
+        outline: none;
+        padding: 12px 16px;
+        background-color: #f1f1f1;
+        cursor: pointer;
+      }
+
+      .btn:hover {
+        background-color: #ddd;
+      }
+      h1 {
+        text-align: center;
+      }
+      img {
+        display: block;
+      }
+
+      .btn.active {
+        background-color: #666;
+        color: white;
+      }
+
+      .table {
+        width: 90%;
+        margin-left: 5%;
+      }
+    </style>
+  </head>
+  <body>
+    <!--header-->
+    <nav>
+      <a href="index.html"
+        ><img
+          src="https://cdn.glitch.com/1ec3f49c-c727-4187-8082-d28c4e9b2889%2Flogo2.png?v=1629571616573"
+      /></a>
+      <div class="nav-links" id="navlinks">
+        <i class="fa fa-times" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="python_tutorial.html">Python</a></li>
+          <li><a href="javascript_tutorial.html">JavaScript</a></li>
+          <li><a href="html_css_tutorial.html">HTML/CSS</a></li>
+          <!-- <li><a href="game.html">Game</a></li> -->
+          <li><a href="project_ideas.html">Project Ideas</a></li>
+          <li><a href="more_resources.html">More Resources</a></li>
+        </ul>
+      </div>
+      <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+    <section class="table">
+      <p style="padding-left:40%;">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png"
+          width="300"
+          length="300"
+        />
+      </p>
+      <h2>What is HTML</h2>
+      <p>
+        HTML is a markup language that defines the structure of your content.
+        HTML consists of a series of elements, which you use to enclose, or
+        wrap, different parts of the content to make it appear a certain way, or
+        act a certain way. The enclosing tags can make a word or image hyperlink
+        to somewhere else, can italicize words, can make the font bigger or
+        smaller, and so on.
+      </p>
+      <p>Creates the structure for all web pages on the internet</p>
+      <p>
+        A file ending in .html lets your browser know that you are coding in
+        html
+      </p>
+
+      <h2>A brief History about HTML</h2>
+      <p>
+        The first version of HTML was written by Tim Berners-Lee in 1993. Since
+        then, there have been many different versions of HTML. The most widely
+        used version throughout the 2000's was HTML 4.01, which became an
+        official standard in December 1999.
+      </p>
+
+      <p>
+        Another version, XHTML, was a rewrite of HTML as an XML language. XML is
+        a standard markup language that is used to create other markup
+        languages. Hundreds of XML languages are in use today, including GML
+        (Geography Markup Language), MathML, MusicML, and RSS (Really Simple
+        Syndication). Since each of these languages was written in a common
+        language (XML), their content can easily be shared across applications.
+        This makes XML potentially very powerful, and it's no surprise that the
+        W3C would create an XML version of HTML (again, called XHTML). XHTML
+        became an official standard in 2000, and was updated in 2002. XHTML is
+        very similar to HTML, but has stricter rules. Strict rules are necessary
+        for all XML languages, because without it, interoperability between
+        applications would be impossible. You'll learn more about the
+        differences between HTML and XHTML in Unit 2.
+      </p>
+
+      <p>
+        Most pages on the Web today were built using either HTML 4.01 or XHTML
+        1.0. However, in recent years, the W3C (in collaboration with another
+        organization, the WHATWG), has been working on a brand new version of
+        HTML, HTML5. Currently (2011), HTML5 is still a draft specification, and
+        is not yet an official standard. However, it is already widely supported
+        by browsers and other web-enabled devices, and is the way of the future.
+        Therefore, HTML5 is the primary language taught in this course.
+      </p>
+
+      <h2>Examples of types of content that can be included on web pages</h2>
+
+      <p>
+        The following table shows a list of many of the types of content that
+        can be added to web pages using different versions of HTML. In the early
+        days of the Web, HTML (version 1.2) was very simple, but over time new
+        versions were released that added more and more features. Still, if web
+        designers wanted to add content or features that HTML didn't support,
+        they would have to do so with non-standard proprietary technologies such
+        as Adobe Flash. These technologies would require users to install
+        browser plug-ins, and in some cases meant that certain users would be
+        unable to access the content (for example, iPhones and iPads don't
+        support Flash).
+      </p>
+
+      <p>
+        HTML5 has added support for many new features that will make it possible
+        to do more with HTML, without relying on non-standard proprietary
+        technologies.
+      </p>
+
+      <img
+        src="https://d2h0cx97tjks2p.cloudfront.net/blogs/wp-content/uploads/sites/2/2020/06/HTML-Basics.jpg"
+      />
+    </section>
+    <!--footer-->
+    <section class="footer">
+      <h3>About Us</h3>
+      <p>
+        This website was created by Hiba Altaf, Thanhbinh Nguyen, and Anas
+        Ahmed.<br />
+        The material on this page can only be used for academic purposes and the
+        authors must be accredited for all original content.
+      </p>
+      <div class="icons">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-linkedin"></i>
+      </div>
+    </section>
+  </body>
+</html>

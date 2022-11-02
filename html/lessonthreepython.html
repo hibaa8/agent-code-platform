@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name='viewport' content='with=device-width, initial-scale=1.0'>
+    <title>Agent Code</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous">
+<style>
+    * {
+        box-sizing: border-box;
+      }
+
+      /* Create two equal columns that floats next to each other */
+      .column {
+        float: left;
+        width: 50%;
+        padding: 10px;
+      }
+
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      /* Style the buttons */
+      .btn {
+        border: none;
+        outline: none;
+        padding: 12px 16px;
+        background-color: #f1f1f1;
+        cursor: pointer;
+      }
+
+      .btn:hover {
+        background-color: #ddd;
+      }
+      h1 {
+        text-align: center;
+      }
+      img {
+        display: block;
+      }
+
+      .btn.active {
+        background-color: #666;
+        color: white;
+      }
+
+      .table{
+          width:90%;
+          margin-left:5%;
+      }
+      .main{
+          width:90%;
+          margin-left:5%;
+          margin-top:none;
+          align:center;
+      }
+      .main img{
+          width:30%;
+          height:30%;
+          padding:20px;
+          align:center;
+      }
+      
+    </style>
+</head>
+<body>
+    <!--header-->
+    <nav>
+        <a href="index.html"><img src="https://cdn.glitch.com/1ec3f49c-c727-4187-8082-d28c4e9b2889%2Flogo2.png?v=1629571616573"/></a>
+        <div class="nav-links" id="navlinks">
+          <i class="fa fa-times" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="python_tutorial.html">Python</a></li>
+            <li><a href="javascript_tutorial.html">JavaScript</a></li>
+            <li><a href="html_css_tutorial.html">HTML/CSS</a></li>
+            <!-- <li><a href="game.html">Game</a></li> -->
+            <li><a href="project_ideas.html">Project Ideas</a></li>
+            <li><a href="more_resources.html">More Resources</a></li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+        
+    <!--body-->
+    <section class='main'>
+        <h1>Python Boiler Plate</h1>
+        <p> It's essential to learn the syntax, or rules for writing a language, so you can learn to write clean, concise, functional code that is easy to read and debug.</p>
+        <h2>Indentation</h2>
+        <p>Indentation refers to the spaces at the beginning of a line of code. In many languages indentation is for readability only but in Python it is mandatory, meaning the code will not run if it is not indented correctly.
+        Hence, it's essential that you copy the indentation guidelines we
+        provide in the upcoming lessons.</p>
+        <p>The number of spaces you choose to use is up to you but have at least one. Generally, programmers use tab, equivalent to 4 spaces, for indenting. 
+        Also, make sure to use the same number of spaces for the same block of code. If indentation varys randomly in your code, then the
+        computer will have a difficult time understanding the code structure or scope of each item and it will throw you an syntax error.
+        Generally, items that are indented have a local scope while those that are not indented
+        have a global scope. 
+        </p>
+        <p>Correct Indentation: </p>
+        <img src='https://cdn.glitch.com/1ec3f49c-c727-4187-8082-d28c4e9b2889%2Fimg1.png?v=1629657814402'>
+        <p>Incorrect Indentation: </p>
+        <img src='https://cdn.glitch.com/1ec3f49c-c727-4187-8082-d28c4e9b2889%2Fimg2.png?v=1629657856019'>
+        <h2>Python Comments</h2>
+        <p> In python, comments are added to help the programmer navigate through files, especially when they start writing hundreds of lines of code. 
+        Generally, comments are placed above blocks of text to describe their functionality or purpose in the program. They can be a phrase or 1-2 sentences but they should not be any longer
+        because you don't want to clutter your code.</p>
+        <p>In python, one line comments are started with a hashtag. They can be placed on a seperate line or the end of a line of code. Multiline comments start and end with triple quotes.
+        Anything you place inside comments will not be read by the computer so the comments are only there
+        for human eyes and have no impact on the program itself. You should also have comments in your code so
+        other programmers can easily navigate through and understand your code.
+        </p>
+        <p>You can also place code that you don't want to run or delete inside comments so the computer ignores the code
+        but you have it accessible to you. This tactic is very useful in debugging since it helps
+        programmers understand the functionality of different parts of their code without having to delete any important code block.
+        </p>
+        <img src='https://cdn.glitch.com/1ec3f49c-c727-4187-8082-d28c4e9b2889%2Fimg4.png?v=1629657867067'>
+        <p> In this example, the program will ignores
+        the first print statement, since its in a comment, 
+        and only print the second print statement, 'Hello World'.
+        </p>
+        <img src='https://cdn.glitch.com/1ec3f49c-c727-4187-8082-d28c4e9b2889%2Fimg3.png?v=1629657861310'>
+        <h2>Python Mathematical Operators</h2>
+        <p>Operators are used to perform operations on variables and values. You can compute in Python similiar to how you would on a calculator. 
+        For instance print(2+2) in python would yeild 4 as it would on a regular calculator. This similicity is why Python is often used 
+        to perform complex mathematical operations and given preference over other languages for math.
+        Use the follow table to learn about key operators in Python.
+        </p>
+        <img src='https://cdn.glitch.com/1ec3f49c-c727-4187-8082-d28c4e9b2889%2Fimg5.png?v=1629657873265'>
+        <p>Here are some examples to help you understand how these operators work. We strongly suggest running these commands 
+        yourself so you can get familiar with Python syntax and operators.
+        </p>
+        <img src='https://cdn.glitch.com/1ec3f49c-c727-4187-8082-d28c4e9b2889%2Fimg6.png?v=1629657878992'>
+    </section>
+    <!--footer-->
+    <section class='footer'>
+        <h3>About Us</h3>
+        <p>This website was created by Hiba Altaf, Thanhbinh Nguyen, and Anas Ahmed.<br> The material on this page can only be used for academic purposes and the authors must be accredited for all original content.</p>
+        <div class='icons'>
+            <i class='fa fa-facebook'></i>
+            <i class='fa fa-twitter'></i>
+            <i class='fa fa-instagram'></i>
+            <i class='fa fa-linkedin'></i>
+        </div>
+    </section>
+<script>
+var navLinks = document.getElementById('navlinks');
+function showMenu(){
+    navlinks.style.right = '0';
+}
+function hideMenu(){
+    navlinks.style.right = '-150px';
+}
+
+</script>
+</body>
+
+</html>

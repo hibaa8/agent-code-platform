@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0" />
+    <title>Agent Code</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      /* Create two equal columns that floats next to each other */
+      .column {
+        float: left;
+        width: 50%;
+        padding: 10px;
+      }
+
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      /* Style the buttons */
+      .btn {
+        border: none;
+        outline: none;
+        padding: 12px 16px;
+        background-color: #f1f1f1;
+        cursor: pointer;
+      }
+
+      .btn:hover {
+        background-color: #ddd;
+      }
+      h1,h2 {
+        text-align: center;
+      }
+      img {
+        display: block;
+      }
+
+      .btn.active {
+        background-color: #666;
+        color: white;
+      }
+
+      .table {
+        width: 90%;
+        margin-left: 5%;
+      }
+    </style>
+  </head>
+  <body>
+    <!--header-->
+    <nav>
+      <a href="index.html"
+        ><img
+          src="https://cdn.glitch.com/1ec3f49c-c727-4187-8082-d28c4e9b2889%2Flogo2.png?v=1629571616573"
+      /></a>
+      <div class="nav-links" id="navlinks">
+        <i class="fa fa-times" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="python_tutorial.html">Python</a></li>
+          <li><a href="javascript_tutorial.html">JavaScript</a></li>
+          <li><a href="html_css_tutorial.html">HTML/CSS</a></li>
+          <!-- <li><a href="game.html">Game</a></li> -->
+          <li><a href="project_ideas.html">Project Ideas</a></li>
+          <li><a href="more_resources.html">More Resources</a></li>
+        </ul>
+      </div>
+      <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+
+    <section class="table">
+      <div>
+        <p style="padding-left:40%;">
+          <img
+            src="https://www.ocpsoft.org/wp-content/uploads/2013/01/javascript_logo_unofficial.png"
+            alt="Logo"
+            width="300"
+            length="300"
+          />
+        </p>
+
+        <h2>
+          JavaScript Numbers and Operators
+        </h2>
+        <p>
+          JavaScript has both binary and unary operators, and one special
+          ternary operator, the conditional operator. A binary operator requires
+          two operands, one before the operator and one after the operator:
+          <br />
+          For example, 3+4 or x*y.
+          <br />
+          A unary operator requires a single operand, either before or after the
+          operator:
+          <br />
+          For example, x++ or ++x.
+        </p>
+        <h3>
+          Assignment operators
+        </h3>
+        <p>
+          An assignment operator assigns a value to its left operand based on
+          the value of its right operand. The simple assignment operator is
+          equal (=), which assigns the value of its right operand to its left
+          operand. That is, x = y assigns the value of y to x.
+        </p>
+        <p>
+          There are also compound assignment operators that are shorthand for
+          the operations listed in the following table:
+        </p>
+      </div>
+    </section>
+
+    <section class="table">
+      <h3>
+        Return value and chaining
+      </h3>
+      <p>
+        Like most expressions, assignments like x = y have a return value. It
+        can be retrieved by e.g. assigning the expression or logging itLike most
+        expressions, assignments like x = y have a return value. It can be
+        retrieved by e.g. assigning the expression or logging it.
+      </p>
+
+      <p style="padding-left:30%;">
+        <img
+          src="https://cdn.glitch.com/05878508-358b-4f28-b8fe-f91183bc04d9%2FScreen%20Shot%202021-08-22%20at%201.21.18%20AM.png?v=1629609737593"
+          width="600"
+          length="400"
+        />
+      </p>
+
+      <p>
+        The return value matches the expression to the right of the = sign in
+        the “Meaning” column of the table above. That means that (x = y) returns
+        y, (x += y) returns the resulting sum x + y, (x **= y) returns the
+        resulting power x ** y, and so on. In the case of logical assignments,
+        (x &&= y), (x ||= y), and (x ??= y), the return value is that of the
+        logical operation without the assignment, so x && y, x || y, and x ?? y,
+        respectively.
+      </p>
+
+      <p>
+        Note that the return values are always based on the operands’ values
+        before the operation.
+        <br />
+        When chaining these expressions, each assignment is evaluated
+        right-to-left. Consider these examples:
+      </p>
+      <ul>
+        <li>
+          w = z = x = y is equivalent to w = (z = (x = y)) or x = y; z = y; w =
+          y
+        </li>
+        <li>
+          z += x *= y is equivalent to z += (x *= y) or tmp = x * y; x *= y; z
+          += tmp (except without the tmp).
+        </li>
+      </ul>
+
+      <h3>
+        Comparison operators
+      </h3>
+
+      <p>
+        A comparison operator compares its operands and returns a logical value
+        based on whether the comparison is true. The operands can be numerical,
+        string, logical, or object values. Strings are compared based on
+        standard lexicographical ordering, using Unicode values. In most cases,
+        if the two operands are not of the same type, JavaScript attempts to
+        convert them to an appropriate type for the comparison. This behavior
+        generally results in comparing the operands numerically. The sole
+        exceptions to type conversion within comparisons involve the === and !==
+        operators, which perform strict equality and inequality comparisons.
+        These operators do not attempt to convert the operands to compatible
+        types before checking equality.
+      </p>
+
+      <p>
+        If you use the document.write() method method after the page has been
+        loaded, it will overwrite all the existing content in that document.
+        Check out the following example:
+      </p>
+      <h3>
+        Arithmetic Operator
+      </h3>
+      <p>
+        An arithmetic operator takes numerical values (either literals or
+        variables) as their operands and returns a single numerical value. The
+        standard arithmetic operators are addition (+), subtraction (-),
+        multiplication (*), and division (/). These operators work as they do in
+        most other programming languages when used with floating point numbers
+        (in particular, note that division by zero produces Infinity).
+        <br />
+        In addition to the standard arithmetic operations (+, -, *, /),
+        JavaScript provides the arithmetic operators listed in the following
+        table:
+      </p>
+      <p style="padding-left:30%;">
+        <img
+          src="https://i.pinimg.com/originals/13/09/cb/1309cb725dea3e859a873607dd298d00.png"
+          width="600px"
+          height="400px"
+        />
+      </p>
+    </section>
+
+    <!--footer-->
+    <section class="footer">
+      <h3>About Us</h3>
+      <p>
+        This website was created by Hiba Altaf, Thanhbinh Nguyen, and Anas
+        Ahmed.<br />
+        The material on this page can only be used for academic purposes and the
+        authors must be accredited for all original content.
+      </p>
+      <div class="icons">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-linkedin"></i>
+      </div>
+    </section>
+  </body>
+</html>

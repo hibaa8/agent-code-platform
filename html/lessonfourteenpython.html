@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name='viewport' content='with=device-width, initial-scale=1.0'>
+    <title>Agent Code</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous">
+<style>
+    * {
+        box-sizing: border-box;
+      }
+
+      /* Create two equal columns that floats next to each other */
+      .column {
+        float: left;
+        width: 50%;
+        padding: 10px;
+      }
+
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      /* Style the buttons */
+      .btn {
+        border: none;
+        outline: none;
+        padding: 12px 16px;
+        background-color: #f1f1f1;
+        cursor: pointer;
+      }
+
+      .btn:hover {
+        background-color: #ddd;
+      }
+      h1 {
+        text-align: center;
+      }
+      .main h2, h3{
+        text-align:left;
+      }
+      .footer h3{
+          text-align:center;
+      }
+      img {
+        display: block;
+      }
+
+      .btn.active {
+        background-color: #666;
+        color: white;
+      }
+
+      .table{
+          width:90%;
+          margin-left:5%;
+      }
+      .main{
+          width:90%;
+          margin-left:5%;
+          margin-top:none;
+          text-align:left;
+      }
+      .main img{
+          width:20%;
+          height:20%;
+          padding:20px;
+          min-width:800px;
+          min-height:200px;
+      }
+      
+    </style>
+</head>
+<body>
+    <!--header-->
+    <nav>
+        <a href='index.html'><img src='https://cdn.glitch.com/1ec3f49c-c727-4187-8082-d28c4e9b2889%2Flogo2.png?v=1629571616573'></a>
+        <div class="nav-links" id="navlinks">
+          <i class="fa fa-times" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="python_tutorial.html">Python</a></li>
+            <li><a href="javascript_tutorial.html">JavaScript</a></li>
+            <li><a href="html_css_tutorial.html">HTML/CSS</a></li>
+            <!-- <li><a href="game.html">Game</a></li> -->
+            <li><a href="project_ideas.html">Project Ideas</a></li>
+            <li><a href="more_resources.html">More Resources</a></li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+        
+    <!--body-->
+    <section class='main'>
+        <h1>Python Classes/Inheritance</h1>
+        <h2>Classes</h2>
+        <img src='https://cdn.glitch.com/1ec3f49c-c727-4187-8082-d28c4e9b2889%2Fimg53.PNG?v=1629828709359'>
+        <p>
+        Object-oriented programming (OOP) is a method of structuring a program by bundling related properties and methods into individual objects.
+        Basically, objects are like components of a system. Think of classes as representing any common object or being like a human.
+        So, lets create a class called 'Human'. First, we need to think of properties that define humans. Some properties include 
+        height, weight, and hobbies. Second, what behaviors can humans perform? Well, humans can run, jump, kick, and do so much more but we'll stick
+        with those three for now. Now, we have defined the properties and behaviors that define humans so we can create many human objects
+        that have the properties that we just mentioned. Using this basic example, you can understand class properties, methods, and objects. 
+        This class is also visualized in the graphic above.
+        </p>
+        <p>Now lets implement the steps we discussed in code. First, lets create the properties for a human object. A class starts off with an init method where
+        parameters are turned into instance variables, or variables belonging to the objects of the class. For the human class, 
+        the init method would look something like this-
+        <img src='https://cdn.glitch.com/1ec3f49c-c727-4187-8082-d28c4e9b2889%2Fimg54.PNG?v=1629828717533'>
+        <p>Some important things to note here is that you must always pass in 'self' as the first parameter in the init
+        and all other class methods. Furthermore, every instance variable and method you reference must be preceded by self.
+        Lastly, you can easily turn any parameter into an instance variable by doing self.instance_var_name = parameter_name, as shown above.
+        </p>
+        <p>Now, lets implement the methods for our Human class. Methods translate into functions inside of a class, so we will create
+        three methods for each of our behaviors and have certain blocks of code run when these methods are called.
+        </p>
+        <img src='https://cdn.glitch.com/1ec3f49c-c727-4187-8082-d28c4e9b2889%2Fimg55.PNG?v=1629828727648'>
+        <p>
+        In the example above, we added an extra instance variable, name to make the output more interesting. Now pay attention
+        to how we spaced the methods. They all have the same indentation as the init class, signifying to the computer that they are inside of the
+        Human class. Furthermore, each method takes in the 'self' parameter. This is crucial because without the parameter, these functions would
+        not be methods of the Human class meaning, we wouldn't be able to use the instance variables or have any properties of classes.
+        </p>
+        <p>Now, lets create a Human object that has the properties and methods we just defined. Meaning, we can easily access
+        all the instance variables and methods that we defined for the object that we define without having to write any code.
+        </p>
+        <img src='https://cdn.glitch.com/1ec3f49c-c727-4187-8082-d28c4e9b2889%2Fimg56.PNG?v=1629828748045'>
+        <p>As you can see, we can easily access all the properties and methods of Human through our sally object simply by doing
+        object_name.method() or object_name.property. You can also change properties by doing object_name.property = new_value. 
+        To delete a property, do del object_name.property.</p>
+        <h2>Inheritance<h2>
+        <p>
+        Now lets say we want to get some properties from another class. But since we are good programmers, we wont just
+        copy paste the methods and properties we need into our new class. Instead, we will inherit the the other class
+        and then take methods and properties that we need. 
+        </p>
+        <p>Parent class - the class being inherited from, also known as the base class</p>
+        <p>Child class - the class that inherits from the parent class, also called the derived class</p>
+        <p>The child class gets all the properties of methods of the parent class, as shown below.</p>
+        <img src='https://cdn.glitch.com/1ec3f49c-c727-4187-8082-d28c4e9b2889%2Fimg57.PNG?v=1629828755470'>
+        <p>You can also add new properties to the child class and build upon the properties that it 
+        inherited from the parent class by using an init method. You can also overwrite the values of the instance
+        variables in the parent class by redefining them in the child class. However, if you create an init method, 
+        remember to initialize the parent class inside first with all the necessary parameters. If you don't initialize the parent
+        class then you lose access to its properties and methods. To initialize the parent class, you can either call 
+        parent_class_name.__init__(self, parameters) or you can do super.__init__(self, parameters).
+        </p>
+        <p>Similiarly, you can add new methods to the child class and you can overwrite the methods in the parent
+        class by redefining them. Keep in mind that you can use the instance variables and methods of the parent class 
+        in your methods. Furthermore, remmeber to pass in the self parameter into the methods, as always.
+        </p>
+        <img src='https://cdn.glitch.com/1ec3f49c-c727-4187-8082-d28c4e9b2889%2Fimg58.PNG?v=1629828765578'>
+    </section>
+    <!--footer-->
+    <section class='footer'>
+        <h3>About Us</h3>
+        <p>This website was created by Hiba Altaf, Thanhbinh Nguyen, and Anas Ahmed.<br> The material on this page can only be used for academic purposes and the authors must be accredited for all original content.</p>
+        <div class='icons'>
+            <i class='fa fa-facebook'></i>
+            <i class='fa fa-twitter'></i>
+            <i class='fa fa-instagram'></i>
+            <i class='fa fa-linkedin'></i>
+        </div>
+    </section>
+<script>
+var navLinks = document.getElementById('navlinks');
+function showMenu(){
+    navlinks.style.right = '0';
+}
+function hideMenu(){
+    navlinks.style.right = '-150px';
+}
+
+</script>
+</body>
+
+</html>
